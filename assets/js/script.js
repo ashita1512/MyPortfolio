@@ -134,6 +134,17 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+//contact message 
+document.addEventListener('DOMContentLoaded', function(){
+  const form = document.getElementById('messageForm');
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+    const message = form.querySelector('[name="message"]').value;
+    const mailtoLink = 'mailto:ashitanihore@gmail.com?body=' +  encodeURIComponent(message);
+    window.location.href = mailtoLink;
+  });
+});
+
 
 
 // page navigation variables
