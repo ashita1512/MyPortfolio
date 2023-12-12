@@ -94,6 +94,16 @@ const filterFunc = function (selectedValue) {
 
 }
 
+//project items variables
+const projectItems = document.querySelectorAll("[data-filter-item]");
+for(let i=0; i<projectItems.length; i++){
+  projectItems[i].addEventListener("click", function(event){
+    event.preventDefault();
+    const projectLink = this.querySelector("a").getAttribute("href");
+    window.open(projectLink, "_blank");
+  });
+}
+
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
@@ -144,8 +154,6 @@ document.addEventListener('DOMContentLoaded', function(){
     window.location.href = mailtoLink;
   });
 });
-
-
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
