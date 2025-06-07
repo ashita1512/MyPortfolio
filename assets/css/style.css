@@ -540,7 +540,24 @@ main {
   line-height: 1.6;
 }
 
+.service-link {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  gap: 8px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  margin-top: 10px;
+  transition: var(--transition-1);
+}
 
+.service-link:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+.service-link ion-icon {
+  font-size: 20px;
+}
 /*-----------------------------------*\
 #RESUME
 \*-----------------------------------*/
